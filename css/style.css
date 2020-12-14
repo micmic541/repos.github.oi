@@ -1,0 +1,247 @@
+@charset"utf-8"; 
+
+/*Global*/
+
+* {
+	margin: 0; 
+	padding: 0; 
+}
+
+html {
+	font-size: 100%;
+}
+
+img { width: 100%; }
+
+body { font-family: font-family: 'Sawarabi Mincho', sans-serif; }
+
+/*Header*/
+
+.header-wrapper {
+	max-width: 1100px; 
+	margin: 0 auto; 
+	position: relative; 
+}
+
+.big-bg {
+	background-position: center; 
+	background-size: cover; 
+	background-repeat: no-repeat; 
+	object-fit: cover; 
+}
+
+#home {
+	position: relative; 
+	background-image: url('../img/big-img1.jpg'); 
+	min-height: 76vh; 
+} 
+
+#home h2 {
+	font-size: 55px; 
+	font-weight: 400; 
+	text-align: center; 
+	margin: 0 auto; 
+	z-index: 0; 
+}
+
+.header-wrap2 {
+	font-family: 'Sawarabi Mincho', sans-serif;
+	position: absolute; 
+    left: 27%;
+    top: 34%;
+	color: white; 
+}
+
+.header-wrap2 .btn { 
+	background: #402717; 
+	padding: 14px; 
+	border: 1px solid; 
+	border-radius: 100vh; 
+}
+
+.header-wrap2 .btn:hover { 
+	opacity: 0.9; 
+	transition: background 1s; 
+}
+
+.header-wrap2 .btn a:hover { 
+	text-decoration: none; 
+	opacity: 0.8; 
+	transition: background 1s; 
+}
+
+
+.navbar { z-index: 30; }
+.navbar a, 
+.header-wrap2 .btn a,
+.service-container .btn a { font-family: 'Abril Fatface'; font-size: 22px;  }
+
+.navbar a:hover { opacity: 0.8; transition: transform .4s; }
+
+.navbar-nav a {
+	position: relative; 
+	display: inline-block; 
+	text-decoration: none; 
+}
+
+.navbar-nav a::after {
+	position: absolute; 
+	bottom: -4px; 
+	left: 0; 
+	content: ''; 
+	width: 100%; 
+	height: 1px; 
+	background: #fff; 
+	transform: scale(0, 1);
+	transform-origin: center top; 
+	transition: transform .4s; 
+}
+
+.navbar-nav a:hover::after {
+  transform: scale(1, 1);
+}
+
+.navbar-brand {
+	color: #fff; 
+	font-size: 40px !important; 
+}
+.navbar-inner { background-color: transparent; }
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/*NEWS*/
+
+.news-container { 
+	padding-top: 5%; 
+	margin: 0 auto 20px auto; 
+	display: flex;
+	justify-content: center; 
+}
+
+.news-item { 
+	display: flex; 
+	flex-wrap: wrap; 
+	padding-bottom: 20px; 
+}
+
+.sub-title p,
+.news-container a,
+.datetime, 
+.category { 
+	font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+.news-container a { 
+	display: inline-block; 
+	text-decoration: none; 
+	font-size: 18px; 
+	color: #402717 !important; 
+}
+.news-container a:hover {
+	opacity: 0.8; 
+	text-decoration: underline; 
+	color: #402717; 
+	transition: 1s; 
+}
+
+
+.sub-title h2 { 
+	color: #ab0f50;
+	font-family: 'Abril Fatface';
+	font-size: 42px;
+}
+
+.category { 
+	background-color: #f6efdb; 
+	border: 1px transparent solid; 
+	border-radius: 5px; 
+	color: #402717 !important; 
+}
+
+/*SERVICE*/
+
+.service-container .btn { 
+	text-align: center; 
+	background: #402717; 
+	padding: 14px 80px; 
+	border-radius: 100vh; 
+	transition: background 1s; 
+}
+
+.service-container .btn a {
+	color: #fff; 
+	text-decoration: none; 
+}
+
+.service-container .btn:hover {
+	opacity: 0.8; 
+	background: #402717; 
+	transition: background 1s; 
+}
+
+.card-title, 
+.card-text { 
+	font-family: 'Sawarabi Mincho', sans-serif;
+	font-weight: 450; 
+}
+
+
+
+.event-container { flex-wrap: wrap !important; }
+
+.event-contents1 { 
+	z-index: 20; 
+}
+
+.event-contents2 {
+    background-color: #f6efdb;
+    z-index: 10;
+    max-width: 916px;
+    min-height: 488px;
+}
+
+/*--
+position: relative; 
+position: absolute;
+    left: 33%;
+    top: -12%; --*/
+
+
+
+/*レスポンシブ：nabbar-brandのhover効かない*/
+@media(max-width: 1024px) {
+	
+	/*Header*/
+	.navbar-inner { background-color: #402717; }
+	.navbar a:hover { opacity: 1; transition: transform .3s; }
+	.navbar .navbar-brand a:hover { opacity: 0.8; transition: transform .4s !important; }
+	header .navbar { position: fixed; width: 100%; }
+	
+	#home h2 {
+	font-size: 32px; 
+	font-weight: 400; 
+}
+
+	.header-wrap2 {
+		 left: 2%;
+		top: 32%;
+	}
+	
+	.header-wrap2 .btn a  { font-size: 18px; }
+	
+	/*NEWS*/
+	
+	.news-container { 
+		flex-direction: column; 
+		flex-wrap: wrap;
+		margin-bottom: 10px; 
+	}
+	
+	.sub-title h2 { font-size: 35px; }
+	.sub-title h2, .sub-title p { 
+		text-align: center; 
+		margin: 0 auto; 
+}
+
+}
