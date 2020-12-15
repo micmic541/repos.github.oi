@@ -74,7 +74,8 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; }
 .navbar { z-index: 30; }
 .navbar a, 
 .header-wrap2 .btn a,
-.service-container .btn a { font-family: 'Abril Fatface'; font-size: 22px;  }
+.service-container .btn a,
+.event-contents2 .btn a { font-family: 'Abril Fatface'; font-size: 22px;  }
 
 .navbar a:hover { opacity: 0.8; transition: transform .4s; }
 
@@ -161,20 +162,24 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; }
 
 /*SERVICE*/
 
-.service-container .btn { 
+.service-container .btn,
+.event-contents2 .btn { 
 	text-align: center; 
 	background: #402717; 
 	padding: 14px 80px; 
 	border-radius: 100vh; 
 	transition: background 1s; 
+	box-shadow: -1px 4px 7px 2px #6c757dad; 
 }
 
-.service-container .btn a {
+.service-container .btn a,
+.event-contents2 .btn a {
 	color: #fff; 
 	text-decoration: none; 
 }
 
-.service-container .btn:hover {
+.service-container .btn:hover,
+.event-contents2 .btn:hover {
 	opacity: 0.8; 
 	background: #402717; 
 	transition: background 1s; 
@@ -186,26 +191,62 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; }
 	font-weight: 450; 
 }
 
+/*EVENTS*/
+.event-container {
+	position: relative;
+	display: flex; 
+	flex-wrap: wrap; 
+	align-items: center;
+    padding: 30px 20px 60px 40px;
+}
 
-
-.event-container { flex-wrap: wrap !important; }
-
-.event-contents1 { 
-	z-index: 20; 
+.event-contents1 {
+	width: 59%; 
 }
 
 .event-contents2 {
-    background-color: #f6efdb;
-    z-index: 10;
-    max-width: 916px;
-    min-height: 488px;
+	padding-left: 10%; 
 }
 
-/*--
-position: relative; 
-position: absolute;
-    left: 33%;
-    top: -12%; --*/
+/*Swiper*/
+
+.carousel-item .img-fluid {
+  width:100%;
+  height:auto;
+}
+
+.carousel-item{
+  height: auto;
+}
+
+.carousel-item a {
+  display: block;
+  width:100%;
+}
+
+.carousel-item .show-image {
+  display: block;
+  width:100%;
+}
+
+/*::after*/
+
+.event-container::after {
+	content:""; 
+	position: absolute; 
+	top: -2%; 
+	right: 0; 
+	z-index: -1; 
+	display: block; 
+	background-color: #f6efdb; 
+	width: 60%; 
+	height: 100%; 
+	transform: translateY(-50); 
+}
+
+
+   /* background-color: #f6efdb; */
+   
 
 
 
@@ -244,4 +285,28 @@ position: absolute;
 		margin: 0 auto; 
 }
 
+	/*EVENTS*/
+	
+	.event-container {
+		padding: 60px 20px;
+		flex-direction: column; 
+	}
+
+	.event-contents1 {
+		width: 100%; 
+		text-align: center; 
+	}
+	
+	.event-contents2 {
+		padding-left: 0; 
+	}
+	
+	.event-container::after {
+		top: auto;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 68%;
+		transform: translateY(0);
+	}
 }
