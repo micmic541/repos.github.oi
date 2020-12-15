@@ -208,6 +208,10 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; }
 	padding-left: 10%; 
 }
 
+
+	font-size: .1rem; 
+}
+
 /*Swiper*/
 
 .carousel-item .img-fluid {
@@ -242,10 +246,59 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; }
 	width: 60%; 
 	height: 100%; 
 	transform: translateY(-50); 
+
+}
+
+/*CONCEPT*/
+
+.concept {
+	position: relative; 
+	margin-top: 10%; 
+}
+
+.concept-container {
+	padding-top: 15%; 
+	margin: 0 auto; 
+}
+
+.concept-content {
+	background-attachment: fixed; 
+	background-color: #f6efdb; 
+	opacity: .9; 
+	border: 1px rgba(255,255,255,0) solid; 
+	border-radius: 5px; 
+	width: 80vw; 
+	height: auto; 
+	margin: 0 auto; 
+	padding: 2%; 
+	text-align: center; 
+}
+
+.concept-text p,
+.event-text p {
+	letter-spacing: .1em; 
+	padding-top: 3%; 
+	font-size: 1.1rem; 
+	font-family: 'Sawarabi Mincho', sans-serif;
+	font-weight: 460; 
+}
+
+.concept-text space {
+	background: linear-gradient(transparent 60%, #ffddbc 0%);
+}
+
+.fixed-background {
+	min-height: 90vh; 
+	background-attachment: fixed; 
+	background-size: cover; 
+	background-position: center; 
+}
+
+.background-1 {
+	background-image: url('../img/concept.jpeg');
 }
 
 
-   /* background-color: #f6efdb; */
    
 
 
@@ -309,4 +362,15 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; }
 		height: 68%;
 		transform: translateY(0);
 	}
+	
+	/*CONCEPT*/
+	
+	.concept-container {
+		padding-top: 25%; 
+	}
+	
+	.concept-text p {
+		padding-top: 5%; 
+	}
+
 }
