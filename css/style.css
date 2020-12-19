@@ -13,7 +13,10 @@ html {
 
 img { width: 100%; }
 
-body { font-family: font-family: 'Sawarabi Mincho', sans-serif; }
+body { font-family: font-family: 'Sawarabi Mincho', sans-serif; width: 100%;}
+
+.body-wrap { overflow: hidden; }
+/*↑still 1100px~余白消えない*/
 
 /*Header*/
 
@@ -72,12 +75,17 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; }
 
 
 .navbar { z-index: 30; }
+
 .navbar a, 
 .header-wrap2 .btn a,
 .service-container .btn a,
-.event-contents2 .btn a { font-family: 'Abril Fatface'; font-size: 22px;  }
+.event-contents2 .btn a,
+.recruit-item .btn a,
+.contact-container .btn a { font-family: 'Abril Fatface'; font-size: 22px;  transition: 1.0s ;}
 
-.navbar a:hover { opacity: 0.8; transition: transform .4s; }
+.navbar a:hover,
+.header-wrapper .navbar a:hover, 
+.footer .navbar a:hover { opacity: 0.8; transition: transform .4s; }
 
 .navbar-nav a {
 	position: relative; 
@@ -163,7 +171,9 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; }
 /*SERVICE*/
 
 .service-container .btn,
-.event-contents2 .btn { 
+.event-contents2 .btn,
+.recruit-item .btn,
+.contact-container .btn { 
 	text-align: center; 
 	background: #402717; 
 	padding: 14px 80px; 
@@ -173,13 +183,17 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; }
 }
 
 .service-container .btn a,
-.event-contents2 .btn a {
+.event-contents2 .btn a,
+.recruit-item .btn a,
+.contact-container .btn a {
 	color: #fff; 
 	text-decoration: none; 
 }
 
 .service-container .btn:hover,
-.event-contents2 .btn:hover {
+.event-contents2 .btn:hover,
+.recruit-item .btn:hover,
+.contact-container .btn:hover {
 	opacity: 0.8; 
 	background: #402717; 
 	transition: background 1s; 
@@ -209,8 +223,7 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; }
 }
 
 
-	font-size: .1rem; 
-}
+	
 
 /*Swiper*/
 
@@ -275,7 +288,9 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; }
 }
 
 .concept-text p,
-.event-text p {
+.event-text p,
+.recruit-text p,
+.contact-text p {
 	letter-spacing: .1em; 
 	padding-top: 3%; 
 	font-size: 1.1rem; 
@@ -298,24 +313,123 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; }
 	background-image: url('../img/concept.jpeg');
 }
 
+/*RECRUIT*/
 
+.recruit-wrapper {
+	margin: 12% 5% 5% 5%; 
+}
+
+
+.recruit-content {
+	background-color: #f6efdb; 
+	max-width: 1100px; 
+	max-height: 340px; 
+}
+
+.recruit-img img {
+	object-fit: cover; 
+	min-width: 45vw;
+	width: 100%; 
+	max-height: 340px; 
+}
+
+.recruit-text p {
+	word-wrap: break-word; 
+	font-size: 0.985rem !important; 
+}
+
+/*CONTACT*/
+
+.contact {
+	background-color: #f6efdb; 
+	margin-top: 13%; 
+	padding: 5% 0; 
+	max-height: 52vh; 
+}
+
+/*FOOTER*/
+.footer {
+	min-height: 36vh; 
+	background-color: #402717; 
+}
+
+.footer-container {
+	min-height: 35vh; 
+	max-width: 1300px; 
+}
+
+.footer nav li {
+	padding: 0 3%; 
+	list-style: none; 
+}
+
+.footer nav li a {
+	text-decoration: none; 
+}
+
+
+
+.f-copy {
+	padding-top: 10%;
+	padding-bottom: 0; 
+	margin-bottom: 0; 
+	text-align: center; 
+}
+
+.copy p { color: #d6c299; }
+.my-icon {
+	color: #d6c299;
+	font-size: 2.1em; 
+}
+.fa-twitter:hover,
+.fa-instagram:hover,
+.fa-facebook:hover {
+	color: #f6efdb; 
+	opacity: 0.8; 
+	transition: 1.0s ;
+}
    
 
-
-
-/*レスポンシブ：nabbar-brandのhover効かない*/
-@media(max-width: 1024px) {
+/*フッターのnavbar左によせたい*/
+/*1100以上から右に余白*/
+@media(max-width: 1100px) {
 	
+	/*global btn*/
+	
+	.service-container .btn,
+	.event-contents2 .btn,
+	.recruit-item .btn,
+	.contact-container .btn { 
+		padding: 12px 60px; 
+		border-radius: 100vh; 
+	}
+	/*global letter*/
+	.concept-text p, .event-text p, .recruit-text p, .contact-text p {
+		font-size: 1rem;
+		font-weight: 400;
+	}
+	
+	.news-container a {
+		font-size: 1rem;
+	}
 	/*Header*/
 	.navbar-inner { background-color: #402717; }
 	.navbar a:hover { opacity: 1; transition: transform .3s; }
 	.navbar .navbar-brand a:hover { opacity: 0.8; transition: transform .4s !important; }
-	header .navbar { position: fixed; width: 100%; }
+	header .navbar { position: fixed; width: 100%; height: auto; }
+	
+	#home .navbar {
+		top: 0;
+		opacity: 0; 
+		animation-duration: 3s; 
+		animation-name: fadeIn; 
+		animation-fill-mode: forwards;
+	}
 	
 	#home h2 {
-	font-size: 32px; 
-	font-weight: 400; 
-}
+		font-size: 32px; 
+		font-weight: 400; 
+	}
 
 	.header-wrap2 {
 		 left: 2%;
@@ -341,6 +455,7 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; }
 	/*EVENTS*/
 	
 	.event-container {
+		
 		padding: 60px 20px;
 		flex-direction: column; 
 	}
@@ -370,7 +485,59 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; }
 	}
 	
 	.concept-text p {
+		padding: 5% 2% 0 2%; 
+	}
+	
+	/*RECRUIT*/
+	.recruit-img img {
+		object-position: top center; 
+		width: 100%; 
+		max-height: 20vh; 
+	}
+	
+	.recruit-wrapper {
+		margin: 20% 0 10% 0; 
+	}
+	
+	/*CONTACT*/
+
+	.contact {
+		background-color: #f6efdb; 
+		margin-top: 16%; 
+		padding: 10% 3%; 
+		min-height: 40vh;  
+	}
+	
+	.contact-text {
+		padding: 2% 3%; 
+	}
+	
+	/*FOOTER*/
+	
+	.footer nav li {
+		padding: 3% 0% !important; 
+
+	}
+	
+	
+	.f-copy {
 		padding-top: 5%; 
 	}
+	.my-icon {
+		color: #d6c299;
+		font-size: 2em; 
+	}
 
+}
+
+@keyframes fadeIn {
+  0% {
+	  opacity: 0; 
+	  transform: translateY(-30px);
+  }
+  100% {
+	  opacity: 1; 
+	  transform: translateY(0px); 
+  }
+}
 }
