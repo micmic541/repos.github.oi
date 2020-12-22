@@ -389,9 +389,9 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; width: 100%;}
 	transition: 1.0s ;
 }
    
-
+/*コンセプトの写真が見えない＋fixedしていない*/
+/*Recruitの写真*/
 /*フッターのnavbar左によせたい*/
-/*1100以上から右に余白*/
 @media(max-width: 1100px) {
 	
 	/*global btn*/
@@ -455,7 +455,6 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; width: 100%;}
 	/*EVENTS*/
 	
 	.event-container {
-		
 		padding: 60px 20px;
 		flex-direction: column; 
 	}
@@ -491,7 +490,7 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; width: 100%;}
 	/*RECRUIT*/
 	.recruit-img img {
 		object-position: top center; 
-		width: 100%; 
+		width: 100%;  
 		max-height: 20vh; 
 	}
 	
