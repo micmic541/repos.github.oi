@@ -2,6 +2,8 @@
 
 /*Global*/
 
+
+
 * {
 	margin: 0; 
 	padding: 0; 
@@ -16,7 +18,7 @@ img { width: 100%; }
 body { font-family: font-family: 'Sawarabi Mincho', sans-serif; width: 100%;}
 
 .body-wrap { overflow: hidden; }
-/*↑still 1100px~余白消えない*/
+
 
 /*Header*/
 
