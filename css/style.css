@@ -390,8 +390,7 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; width: 100%;}
 }
    
 
-/*フッターのnavbar左によせたい*/
-/*1100以上から右に余白*/
+
 @media(max-width: 1100px) {
 	
 	/*global btn*/
@@ -455,7 +454,6 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; width: 100%;}
 	/*EVENTS*/
 	
 	.event-container {
-		
 		padding: 60px 20px;
 		flex-direction: column; 
 	}
@@ -480,6 +478,18 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; width: 100%;}
 	
 	/*CONCEPT*/
 	
+	.fixed-background {
+		min-height: 90vh; 
+		background-attachment: scroll; 
+		background-size: cover; 
+		background-position: center; 
+	}
+
+.background-1 {
+	background-image: url('../img/concept.jpeg');
+}
+
+	
 	.concept-container {
 		padding-top: 25%; 
 	}
@@ -491,8 +501,9 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; width: 100%;}
 	/*RECRUIT*/
 	.recruit-img img {
 		object-position: top center; 
-		width: 100%; 
-		max-height: 20vh; 
+		width: 100%;
+			height: 100%; 
+		max-height: 24vh; 
 	}
 	
 	.recruit-wrapper {
@@ -519,6 +530,12 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; width: 100%;}
 
 	}
 	
+	.footer nav {
+		position: relative;
+		top: 0%;
+		left: -1%;
+	}
+	
 	
 	.f-copy {
 		padding-top: 5%; 
@@ -528,6 +545,85 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; width: 100%;}
 		font-size: 2em; 
 	}
 
+}
+
+/*iphone 5s etc---------------*/
+@media (max-width: 786px) {
+	
+	.concept-text p, .event-text p, .recruit-text p, .contact-text p {
+		font-size: 0.859rem;
+		font-weight: 400;
+	}
+
+	.fixed-background {
+		min-height: 70vh; 
+		background-attachment: scroll; 
+		background-size: cover; 
+		background-position: center; 
+	}
+	
+	.concept-container {
+		padding-top: 12%; 
+	}
+	
+	.footer nav {
+		position: relative; 
+		top: 0%; 
+		left: -18%; 
+	}
+}
+
+/*iPad iPadPro-----------------------------------*/
+@media(min-height: 1022px) and (max-height: 1368px) {
+	
+	#home {
+		min-height: 48vh;
+	}
+
+	.concept-text p, .event-text p, .recruit-text p, .contact-text p {
+		font-size: 1.1rem;
+		font-weight: 400;
+	}
+
+	.fixed-background {
+		min-height: 48vh; 
+		background-attachment: scroll; 
+		background-size: cover; 
+		background-position: center; 
+	}
+	
+	.concept-container {
+		padding-top: 12%; 
+	}
+	
+	.contact {
+		background-color: #f6efdb;
+		margin-top: 16%;
+		padding: 8% 3%;
+		min-height: 30vh;
+	}
+	
+	.recruit-img img {
+		object-position: top center;
+		width: 100%;
+		height: 100%;
+		max-height: 24vh;
+	}
+	
+	.footer nav {
+		position: relative; 
+		top: 0%; 
+		left: -1%; 
+	}
+}
+
+/*Surface Duo-------------------------------------------*/
+@media(min-width: 500px) and (max-device-width: 540px) {
+	.footer nav {
+		position: relative; 
+		top: 0%; 
+		left: -5%; 
+	}
 }
 
 @keyframes fadeIn {
