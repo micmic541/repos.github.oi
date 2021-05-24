@@ -2,6 +2,8 @@
 
 /*Global*/
 
+
+
 * {
 	margin: 0; 
 	padding: 0; 
@@ -16,7 +18,7 @@ img { width: 100%; }
 body { font-family: font-family: 'Sawarabi Mincho', sans-serif; width: 100%;}
 
 .body-wrap { overflow: hidden; }
-/*↑still 1100px~余白消えない*/
+
 
 /*Header*/
 
@@ -389,8 +391,14 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; width: 100%;}
 	transition: 1.0s ;
 }
    
+<<<<<<< HEAD
 
 
+=======
+/*コンセプトの写真が見えない＋fixedしていない*/
+/*Recruitの写真*/
+/*フッターのnavbar左によせたい*/
+>>>>>>> 3d4bc5edaed5174d11f75a5d23168e616850611f
 @media(max-width: 1100px) {
 	
 	/*global btn*/
@@ -501,9 +509,14 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; width: 100%;}
 	/*RECRUIT*/
 	.recruit-img img {
 		object-position: top center; 
+<<<<<<< HEAD
 		width: 100%;
 			height: 100%; 
 		max-height: 24vh; 
+=======
+		width: 100%;  
+		max-height: 20vh; 
+>>>>>>> 3d4bc5edaed5174d11f75a5d23168e616850611f
 	}
 	
 	.recruit-wrapper {
