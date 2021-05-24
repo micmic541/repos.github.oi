@@ -355,7 +355,7 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; width: 100%;}
 
 .footer-container {
 	min-height: 35vh; 
-	max-width: 1300px; 
+	max-width: 1180px; 
 }
 
 .footer nav li {
@@ -529,8 +529,6 @@ body { font-family: font-family: 'Sawarabi Mincho', sans-serif; width: 100%;}
 		padding: 3% 0% !important; 
 
 	}
-	
-	.footer-container { max-width: 1183px; }
 	
 	.footer nav {
 		position: relative;
